@@ -1,0 +1,43 @@
+name:                   twentyfour
+version:                0.1.0.0
+synopsis:
+    Compilation of Oliver Charles' Twenty Four days of Hackage, 2013 edition
+description:
+    This combines every sample from Oliver Charles' Twenty Four days of Haskell
+    into an easily compilable repository.
+license:                BSD3
+license-file:           LICENSE
+author:                 Oliver Charles
+maintainer:             Alexandre Boily <alexandreboily@gmail.com>
+category:               Graphics
+build-type:             Simple
+cabal-version:          >=1.10
+extra-source-files:     src/scotty/landing.html
+
+executable linear
+    hs-source-dirs:     src/linear
+    main-is:            Main.hs
+    ghc-options:        -Wall
+    build-depends:
+        base >=4.6 && <4.7,
+        distributive,
+        lens,
+        linear,
+        OpenGL,
+        OpenGLRaw,
+        SDL2,
+        text,
+        vector
+    default-language:   Haskell2010
+
+executable scotty
+    hs-source-dirs:     src/scotty
+    main-is:            Main.hs
+    ghc-options:        -Wall
+    build-depends:
+        base >=4.6 && <4.7,
+        aeson,
+        http-types,
+        scotty >=0.6 && <0.7,
+        transformers
+    default-language:   Haskell2010
