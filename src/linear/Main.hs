@@ -12,8 +12,7 @@ import qualified Graphics.UI.SDL as SDL
 import qualified Data.Text as Text
 import qualified Data.Text.Encoding as Text
 import qualified Data.Vector.Storable as V
-import Linear as L
-import Linear ((!*!))
+import Linear
 
 import Data.IORef
 
