@@ -41,6 +41,15 @@ executable tasty
         tasty-smallcheck
     default-language:   Haskell2010
 
+executable extensible-effects
+    hs-source-dirs:     src/extensible-effects
+    main-is:            Main.hs
+    ghc-options:        -Wall
+    build-depends:
+        base >=4.6 && <4.7,
+        extensible-effects
+    default-language:   Haskell2010
+
 executable scotty
     hs-source-dirs:     src/scotty
     main-is:            Main.hs
