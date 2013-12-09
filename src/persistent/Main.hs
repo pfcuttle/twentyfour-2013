@@ -19,6 +19,7 @@ share [mkPersist sqlSettings, mkMigrate "migrateAll"] [persistLowerCase|
 Person
     name Text
     deriving Show
+
 StatusUpdate
     producer PersonId
     update Text
@@ -37,6 +38,10 @@ main = runSqlite ":memory:" $ do
         [ StatusUpdate ollie "Writing another blog post!" now Nothing
         , StatusUpdate ollie "I <3 24 Days of Hackage" now (Just "^.^")
         ]
+
+    sortedNames >>= mapM_ (liftIO . print)
+    latestUpdates >>= mapM_ (liftIO . print)
+
     return ()
 
 
