@@ -87,6 +87,15 @@ executable threepenny-gui
     build-depends:
         base ==4.6.*,
         containers,
-        stm,
-        threepenny-gui
+        stm ==2.4.*,
+        threepenny-gui ==0.4.*
+    default-language:   Haskell2010
+
+executable data-memocombinators
+    hs-source-dirs:     src/data-memocombinators
+    main-is:            Main.hs
+    ghc-options:        -Wall
+    build-depends:
+        base ==4.6.*,
+        data-memocombinators ==0.5.*
     default-language:   Haskell2010
