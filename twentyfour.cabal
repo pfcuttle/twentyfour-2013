@@ -61,3 +61,21 @@ executable scotty
         scotty ==0.6.*,
         transformers ==0.3.*
     default-language:   Haskell2010
+
+executable persistent
+    hs-source-dirs:     src/persistent
+    main-is:            Main.hs
+    ghc-options:        -Wall
+    build-depends:
+        base ==4.6.*,
+        esqueleto ==1.3.*,
+        monad-control ==0.3.*,
+        monad-logger ==0.3.*,
+        persistent ==1.2.*,
+        persistent-sqlite ==1.2.*,
+        persistent-template ==1.2.*,
+        resourcet ==0.4.*,
+        text ==0.11.*,
+        time,
+        transformers ==0.3.*
+    default-language:   Haskell2010
