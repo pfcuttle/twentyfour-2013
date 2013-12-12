@@ -108,3 +108,20 @@ executable sbv
         base ==4.6.*,
         sbv
     default-language:   Haskell2010
+
+-- FIXME gloss
+
+executable heist
+    hs-source-dirs:     src/heist
+    main-is:            Main.hs
+    ghc-options:        -Wall
+    build-depends:
+        base ==4.6.*,
+        blaze-builder,
+        bytestring,
+        either,
+        heist,
+        text,
+        transformers,
+        xmlhtml
+    default-language:   Haskell2010
