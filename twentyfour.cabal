@@ -125,3 +125,13 @@ executable heist
         transformers ==0.3.*,
         xmlhtml ==0.2.*
     default-language:   Haskell2010
+
+executable pandoc
+    hs-source-dirs:     src/pandoc
+    main-is:            Main.hs
+    ghc-options:        -Wall
+    build-depends:
+        base ==4.6.*,
+        blaze-html,
+        pandoc
+    default-language:   Haskell2010
