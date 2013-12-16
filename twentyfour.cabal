@@ -144,3 +144,16 @@ executable async
         base ==4.6.*,
         async ==2.0.*
     default-language:   Haskell2010
+
+executable acid-state
+    hs-source-dirs:     src/acid-state
+    main-is:            Main.hs
+    ghc-options:        -Wall
+    build-depends:
+        base ==4.6.*,
+        acid-state ==0.12.*,
+        containers,
+        mtl ==2.1.*,
+        safecopy ==0.8.*,
+        time
+    default-language:   Haskell2010
