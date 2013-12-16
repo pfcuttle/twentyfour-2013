@@ -132,6 +132,15 @@ executable pandoc
     ghc-options:        -Wall
     build-depends:
         base ==4.6.*,
-        blaze-html,
-        pandoc
+        blaze-html ==0.6.*,
+        pandoc ==1.12.*
+    default-language:   Haskell2010
+
+executable async
+    hs-source-dirs:     src/async
+    main-is:            Main.hs
+    ghc-options:        -Wall
+    build-depends:
+        base ==4.6.*,
+        async ==2.0.*
     default-language:   Haskell2010
