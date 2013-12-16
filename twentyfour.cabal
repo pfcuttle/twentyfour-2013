@@ -157,3 +157,13 @@ executable acid-state
         safecopy ==0.8.*,
         time
     default-language:   Haskell2010
+
+executable time
+    hs-source-dirs:     src/time
+    main-is:            Main.hs
+    ghc-options:        -Wall
+    build-depends:
+        base ==4.6.*,
+        old-locale,
+        time
+    default-language:   Haskell2010
