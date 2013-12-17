@@ -1,8 +1,8 @@
 Twenty Four Days of Hackage, 2013 edition
 =========================================
 
-This combines every sample from Oliver Charles' Twenty Four days of Haskell into
-an easily compilable repository.
+This combines (nearly) every sample from Oliver Charles' Twenty Four days of
+Haskell into an easily compilable repository.
 
 
 Building
@@ -41,6 +41,11 @@ Please run from `src/scotty` if you want to render the included HTML stub.
 ### Heist
 
 Please run from `src/heist` if you want to render the included templates.
+
+
+### Repa
+
+Please run from `src/repa` if you want to snowflake ocharles' picture.
 
 
 Problematic examples
