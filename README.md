@@ -8,7 +8,19 @@ Haskell into an easily compilable repository.
 Building
 --------
 
-The following examples need manual build steps:
+To build all the included examples, run:
+
+```sh
+cabal sandbox init
+cabal add-source {various sources}
+cabal install --dependencies-only
+cabal configure --enable-tests  # Optional
+cabal build
+```
+
+Binaries will be in `dist/{example name}`.
+
+The following examples need manual build or run steps:
 
 
 ### Linear
@@ -48,9 +60,15 @@ Please run from `src/heist` if you want to render the included templates.
 Please run from `src/repa` if you want to snowflake ocharles' picture.
 
 
+### Doctest
+
+Run `cabal configure --enable-tests` before doing `cabal build`, then run `cabal
+test` from this project's root directory.
+
+
 Problematic examples
 --------------------
 
-* [Gloss](http://hackage.haskell.org/package/gloss) conflicts with
-  [Linear](http://hackage.haskell.org/package/linear) because of incompatible
-  OpenGL dependencies.
+[ ] [Gloss](http://hackage.haskell.org/package/gloss) conflicts with
+    [Linear](http://hackage.haskell.org/package/linear) because of incompatible
+    OpenGL dependencies.
